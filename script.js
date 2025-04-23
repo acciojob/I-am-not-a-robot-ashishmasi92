@@ -25,9 +25,12 @@ main.prepend(h3)
 
 let count=0
  function clickImg(e){
-	 let clickImg = e.target.className ="selected"
+	 if (!e.target.classList.contains("selected")) {
+        e.target.classList.add("selected");
+        count++;
+    }
 
-count++
+
 	 if(document.querySelector("#reset")==null){
 		 
 	 let resetBtn = document.createElement("button")
