@@ -8,12 +8,13 @@ let imgUrl = ["img1","img2","img3","img4","img5"]
 let randomindex = Math.floor(Math.random()*imgUrl.length)
 imgUrl.push(imgUrl[randomindex])
 
-
-document.addEventListener("DOMContentLoaded",()=>{
-    let heading = document.createElement("h3")
+let heading = document.createElement("h3")
     heading.id="h"
     heading.textContent ="Please click on the identical tiles to verify that you are not a robot";
     main.prepend(heading)
+    
+document.addEventListener("DOMContentLoaded",()=>{
+    
 
     imageShuffle()
 
